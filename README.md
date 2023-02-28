@@ -67,6 +67,23 @@ deleteById = id
 
 
 ---
+`PATCH`/gestanca/api/pizza{id}
+
+url: "/gestanca/api/pizza{id}"
+
+{
+tamanho: "grande"
+}
+
+---
+
+**Respostas**
+
+| código | descrição
+|-|-
+|200| alteração feita com sucesso
+|404| não foi possível fazer a alteração
+
 
 ### Listar pizza
 

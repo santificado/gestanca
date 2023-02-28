@@ -53,30 +53,37 @@ API da aplicação do aplicativo de delivery de pizza.
 
 ---
 
-### Detalhar despesa
+`DELETE` /gestanca/api/pizza{id}
 
-`GET` /gestanca/api/despesa/{id}
+
+deleteById = id
 
 **Respostas**
 
 | código | descrição
 |-|-
-|200| os dados da despesa foram retornados no corpo da resposta
-|404| não existe despesa com o id informado
+|200| a pizza foi excluida
+|404| erro ao deletar 
+
+
+---
+
+### Listar pizza
+
+`GET` /gestanca/api/pizza/{id}
+
+**Respostas**
+
+| código | descrição
+|-|-
+|200| aqui está a lista completa de pizzas
+
 
 **Exemplo de corpo da resposta**
 ```js 
 {
-    valor: 100.00,
-    data: '2023-01-27',
-    categoria: {
-        categoria_id: 1,
-        nome: 'lazer',
-    }
-    conta: {
-        conta_id: 1,
-        nome: 'itaú',
-    },
-    descricao: 'cinema com os amigos'
+    nome: Pizza de Calabresa,
+    tamanho: 'médio',
+    preço: R$ 38.00
 }
 ```

@@ -11,8 +11,6 @@ API da aplicação do aplicativo de delivery de pizza.
     - Listar todos os produtos
 - Pedido
     - Cadastrar pedido
-    - Apagar pedido
-    - Alterar pedido
     - Informações do cliente
 - Contas
     - Cadastrar conta
@@ -107,3 +105,105 @@ tamanho: "grande"
     preço: R$ 38.00
 }
 ```
+
+-----------------------
+### Cadastrar Pedido
+`POST` /gestanca/api/pedido
+
+| campo | tipo | obrigatório | descrição
+|-------|------|:-------------:|----
+| nome | string | sim | descrição da pizza (ingredientes)
+| tamanho | string | sim | tamanho da pizza (pequena, média e grande)
+| preço | big decimal | sim | preço da pizza 
+| entrega | boolean | sim | método de entrega (0 = retirada / 1 = entrega)
+| observações | string | não | observações do cliente
+
+  **Exemplo de corpo de requisição**
+
+```js 
+{
+    nome: Pizza de marguerita,
+    tamanho: 'grande',
+    preço: R$ 51.00,
+    entrega: 0, 
+    observações: 'null'
+}
+```
+**Respostas**
+
+| código | descrição
+|-|-
+|201| pedido concluído
+|400| faltam informações nos campos obrigatórios
+
+---
+### Informações do cliente
+`POST` /gestanca/api/pedido
+| campo | tipo | obrigatório | descrição
+|-------|------|:-------------:|----
+| nome | string | sim | nome do cliente
+| endereço | string | sim | endereço do cliente
+| telefone | big decimal | sim | telefone do cliente 
+
+  **Exemplo de corpo de requisição**
+
+```js 
+{
+    nome: 'João',
+    endereço: 'rua das laranjeiras',
+    telefone: '(11)94356-2345'
+}
+```
+
+-----------------------
+### Cadastrar contas
+`GET`/gestanca/api/conta
+| campo | tipo | obrigatório | descrição
+|-------|------|:-------------:|----
+| nome | string | sim | nome do cliente
+| endereço | string | sim | endereço do cliente
+| telefone | big decimal | sim | telefone do cliente 
+| id | big decimal | sim | id do usuário
+
+  **Exemplo de corpo de requisição**
+
+```js 
+{
+    nome: 'João',
+    endereço: 'rua das laranjeiras',
+    telefone: '(11)94356-2345'
+}
+```
+---
+### Deletar conta
+`DELETE` /gestanca/api/conta
+
+
+deleteById = id
+
+**Respostas**
+
+| código | descrição
+|-|-
+|200| a conta foi deletada com sucesso
+|404| erro ao deletar 
+
+---
+### Atualizar pizza
+
+`PATCH`/gestanca/api/conta{id}
+
+url: "/gestanca/api/conta{id}"
+
+{
+endereço: 'rua dos limoeiros'
+}
+
+---
+
+**Respostas**
+
+| código | descrição
+|-|-
+|200| alteração feita com sucesso
+|404| não foi possível fazer a alteração

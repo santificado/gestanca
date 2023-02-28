@@ -122,6 +122,11 @@ tamanho: "grande"
 
 ```js 
 {
+    nome: Pizza de Calabresa,
+    tamanho: 'médio',
+    preço: R$ 38.00
+}
+{
     nome: Pizza de marguerita,
     tamanho: 'grande',
     preço: R$ 51.00,
@@ -169,9 +174,9 @@ tamanho: "grande"
 
 ```js 
 {
-    nome: 'João',
-    endereço: 'rua das laranjeiras',
-    telefone: '(11)94356-2345'
+    nome: 'Pedro',
+    endereço: 'rua das parreiras',
+    telefone: '(11)94556-2345'
 }
 ```
 ---

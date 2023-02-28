@@ -214,3 +214,15 @@ endereço: 'rua dos limoeiros'
 |-|-
 |200| alteração feita com sucesso
 |404| não foi possível fazer a alteração
+
+---
+### Cupom
+
+`PATCH`/gestanca/api/pizza{id}
+
+url: "/gestanca/api/pizza{id}"
+
+{
+    valor_desconto = (0.x * preço) - preço
+    valor_total = valor_desconto - preço
+}

@@ -157,6 +157,7 @@ tamanho: "grande"
     nome: 'João',
     endereço: 'rua das laranjeiras',
     telefone: '(11)94356-2345'
+    id: '5'
 }
 ```
 
@@ -177,6 +178,7 @@ tamanho: "grande"
     nome: 'Pedro',
     endereço: 'rua das parreiras',
     telefone: '(11)94556-2345'
+    id: '6'
 }
 ```
 ---
@@ -194,7 +196,7 @@ deleteById = id
 |404| erro ao deletar 
 
 ---
-### Atualizar pizza
+### Atualizar conta
 
 `PATCH`/gestanca/api/conta{id}
 

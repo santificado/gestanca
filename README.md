@@ -52,6 +52,7 @@ API da aplicação do aplicativo de delivery de pizza.
 |400| a validação dos campos falhou
 
 ---
+### Deletar pizza
 
 `DELETE` /gestanca/api/pizza{id}
 
@@ -67,6 +68,8 @@ deleteById = id
 
 
 ---
+### Atualizar pizza
+
 `PATCH`/gestanca/api/pizza{id}
 
 url: "/gestanca/api/pizza{id}"

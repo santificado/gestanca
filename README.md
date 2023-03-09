@@ -113,7 +113,7 @@ tamanho: "grande"
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|----
 | nome | string | sim | descrição da pizza (ingredientes)
-| tamanho | string | sim | tamanho da pizza (pequena, média e grande)
+| tamanho | enum | sim | tamanho da pizza (pequena, média e grande)
 | preco | big decimal | sim | preço da pizza 
 | entrega | boolean | sim | método de entrega (0 = retirada / 1 = entrega)
 | observacoes | string | não | observações do cliente

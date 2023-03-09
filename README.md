@@ -28,8 +28,8 @@ API da aplicação do aplicativo de delivery de pizza.
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|----
 | nome | string | sim | descrição da pizza (ingredientes)
-| tamanho | string | sim | tamanho da pizza (pequena, média e grande)
-| preço | big decimal | sim | preço da pizza 
+| tamanho | enum | sim | tamanho da pizza (pequena, média e grande)
+| preco | big decimal | sim | preço da pizza 
 | id | big decimal | sim | id da pizza
 
   **Exemplo de corpo de requisição**
@@ -44,7 +44,7 @@ API da aplicação do aplicativo de delivery de pizza.
 
 **Respostas**
 
-| código | descrição
+| codigo | descricao
 |-|-
 |201| pizza cadastrada com sucesso
 |400| a validação dos campos falhou
@@ -80,7 +80,7 @@ tamanho: "grande"
 
 **Respostas**
 
-| código | descrição
+| codigo | descricao
 |-|-
 |200| alteração feita com sucesso
 |404| não foi possível fazer a alteração
@@ -92,7 +92,7 @@ tamanho: "grande"
 
 **Respostas**
 
-| código | descrição
+| código | descricao
 |-|-
 |200| aqui está a lista completa de pizzas
 
@@ -102,7 +102,7 @@ tamanho: "grande"
 {
     nome: Pizza de Calabresa,
     tamanho: 'médio',
-    preço: R$ 38.00
+    preco: "R$ 38.00"
 }
 ```
 
@@ -114,9 +114,9 @@ tamanho: "grande"
 |-------|------|:-------------:|----
 | nome | string | sim | descrição da pizza (ingredientes)
 | tamanho | string | sim | tamanho da pizza (pequena, média e grande)
-| preço | big decimal | sim | preço da pizza 
+| preco | big decimal | sim | preço da pizza 
 | entrega | boolean | sim | método de entrega (0 = retirada / 1 = entrega)
-| observações | string | não | observações do cliente
+| observacoes | string | não | observações do cliente
 
   **Exemplo de corpo de requisição**
 
@@ -124,7 +124,7 @@ tamanho: "grande"
 {
     nome: Pizza de Calabresa,
     tamanho: 'médio',
-    preço: R$ 38.00
+    preco: R$ 38.00
 }
 {
     nome: Pizza de marguerita,
@@ -136,7 +136,7 @@ tamanho: "grande"
 ```
 **Respostas**
 
-| código | descrição
+| codigo | descricao
 |-|-
 |201| pedido concluído
 |400| faltam informações nos campos obrigatórios
@@ -147,7 +147,7 @@ tamanho: "grande"
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|----
 | nome | string | sim | nome do cliente
-| endereço | string | sim | endereço do cliente
+| endereco | string | sim | endereço do cliente
 | telefone | big decimal | sim | telefone do cliente 
 
   **Exemplo de corpo de requisição**
@@ -190,7 +190,7 @@ deleteById = id
 
 **Respostas**
 
-| código | descrição
+| código | descricao
 |-|-
 |200| a conta foi deletada com sucesso
 |404| erro ao deletar 
@@ -210,7 +210,7 @@ endereço: 'rua dos limoeiros'
 
 **Respostas**
 
-| código | descrição
+| código | descricao
 |-|-
 |200| alteração feita com sucesso
 |404| não foi possível fazer a alteração
